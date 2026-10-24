@@ -1,444 +1,409 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b3025">
-  <meta name="description" content="ZIRA AI helps you explore scholarships, jobs, internships and free learning resources.">
+  <meta name="theme-color" content="#F8F6FF">
+  <meta name="description" content="ZIRA AI helps you explore scholarships, jobs, internships and free learning resources from official websites.">
   <title>ZIRA AI — Your Future, Within Reach</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-   
+    :root {
+      --lavender: #F8F6FF;
+      --white: #FFFFFF;
+      --soft-lavender: #EAE2F8;
+      --text: #514D59;
+      --muted: #777181;
+      --radius: 20px;
+      --shadow: 0 8px 24px rgba(81, 77, 89, 0.06);
+      color-scheme: light;
+    }
 
-/* ZIRA AI — Light Lavender Professional Design */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-:root {
-  --forest: #514D59;
-  --green: #897AA1;
-  --lime: #EAE2F8;
-  --paper: #F8F6FF;
-  --white: #FFFFFF;
-  --muted: #777181;
-  --line: #EAE2F8;
-  --radius: 20px;
-}
-
-body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  font-weight: 400;
-  letter-spacing: -0.15px;
-  background: #F8F6FF;
-  color: #514D59;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  font-weight: 500;
-  color: #514D59;
-  letter-spacing: -0.4px;
-}
-
-.brand {
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-.navlinks,
-.nav-cta,
-.primary,
-.filter,
-.category strong,
-.stat strong {
-  font-weight: 500;
-}
-
-.topbar {
-  background: #F0EAFB;
-  color: #625B6B;
-}
-
-.topbar span {
-  color: #75658C;
-  font-weight: 500;
-}
-
-header,
-footer {
-  background: #FFFFFF;
-}
-
-.logo {
-  background: #EAE2F8;
-  color: #625675;
-}
-
-.nav-cta,
-.primary {
-  background: #EAE2F8;
-  color: #514D59;
-  border: 1px solid #EAE2F8;
-}
-
-.hero {
-  background: #F0EAFB;
-  color: #514D59;
-}
-
-.hero-copy,
-.trustline {
-  color: #716B7D;
-}
-
-h1 span {
-  color: #897AA1;
-}
-
-.eyebrow {
-  border-color: #DCD2EC;
-  color: #75658C;
-}
-
-.eyebrow i {
-  background: #B8A9D2;
-}
-
-.trustline span::before {
-  color: #897AA1;
-}
-
-.searchbox {
-  border: 1px solid #EAE2F8;
-  box-shadow: 0 10px 30px rgba(81, 77, 89, 0.07);
-}
-
-.category-icon,
-.resource-mark {
-  background: #F0EAFB;
-}
-
-.category:hover {
-  border-color: #D2C5E6;
-}
-
-.opportunities {
-  background: #F3EFFA;
-}
-
-.filter {
-  border-color: #EAE2F8;
-  color: #625B6B;
-}
-
-.filter.active {
-  background: #EAE2F8;
-  color: #514D59;
-  border-color: #DCD2EC;
-}
-
-.resource-type,
-.resource-link,
-.kicker,
-.category .arrow {
-  color: #75658C;
-}
-
-.resource-card,
-.category {
-  background: #FFFFFF;
-  border-color: #EAE2F8;
-  box-shadow: 0 5px 20px rgba(81, 77, 89, 0.04);
-}
-
-.ai-banner {
-  background: #F0EAFB;
-  color: #514D59;
-  border: 1px solid #EAE2F8;
-}
-
-.ai-banner p {
-  color: #716B7D;
-}
-
-.ai-badge {
-  color: #75658C;
-  background: #FFFFFF;
-  border-color: #EAE2F8;
-}
-
-input,
-button {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-}
-
-@media (max-width: 760px) {
-  .navlinks {
-    background: #FFFFFF;
-  }
-}
-    
-    * { box-sizing: border-box; }
-    
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      background: var(--paper);
-      color: var(--forest);
-      line-height: 1.6;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.65;
+      letter-spacing: -0.12px;
+      background: var(--lavender);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    button, input { font: inherit; }
+    button,
+    input {
+      font: inherit;
+    }
 
-    button, a { -webkit-tap-highlight-color: transparent; }
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--text);
+      outline-offset: 3px;
+    }
 
     .container {
-      width: min(1120px, calc(100% - 36px));
+      width: min(1120px, calc(100% - 40px));
       margin-inline: auto;
     }
 
     .topbar {
-      background: var(--forest);
-      color: white;
-      font-size: 12px;
+      padding: 8px 14px;
+      background: var(--soft-lavender);
+      color: var(--text);
       text-align: center;
-      padding: 9px 12px;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
-    .topbar span { color: var(--lime); font-weight: 700; }
+    .topbar span {
+      font-weight: 600;
+    }
 
     header {
+      position: relative;
+      z-index: 10;
       background: var(--white);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid var(--soft-lavender);
     }
 
     .nav {
+      position: relative;
       min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 18px;
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 23px;
-      font-weight: 850;
-      letter-spacing: -1px;
+      gap: 11px;
+      min-width: 0;
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: -0.7px;
     }
 
     .logo {
       width: 42px;
       height: 42px;
+      flex: 0 0 42px;
       display: grid;
       place-items: center;
       border-radius: 14px;
-      background: var(--forest);
-      color: var(--lime);
+      background: var(--soft-lavender);
+      color: var(--text);
       font-size: 22px;
+      font-weight: 600;
     }
 
     .brand small {
       display: block;
-      font-size: 10px;
+      margin-top: 1px;
       color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      line-height: 1.2;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 1.1px;
+      line-height: 1.4;
     }
 
     .navlinks {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 24px;
       font-size: 13px;
-      font-weight: 650;
+      font-weight: 500;
     }
 
-    .navlinks a:hover { color: var(--green); }
+    .navlinks > a:not(.nav-cta) {
+      transition: opacity 0.18s ease;
+    }
 
-    .nav-cta, .primary {
-      border: 0;
-      border-radius: 999px;
-      background: var(--lime);
-      color: var(--forest);
-      padding: 12px 18px;
-      font-weight: 800;
-      cursor: pointer;
+    .navlinks > a:not(.nav-cta):hover {
+      opacity: 0.72;
+    }
+
+    .nav-cta,
+    .primary {
+      min-height: 44px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
+      border: 1px solid var(--soft-lavender);
+      border-radius: 999px;
+      padding: 10px 17px;
+      background: var(--soft-lavender);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.3;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .nav-cta:hover,
+    .primary:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
     }
 
     .menu-toggle {
       display: none;
-      border: 1px solid var(--line);
-      background: white;
-      border-radius: 12px;
-      padding: 9px 12px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--soft-lavender);
+      border-radius: 13px;
+      background: var(--white);
       font-size: 20px;
       cursor: pointer;
     }
 
     .hero {
-      background: var(--forest);
-      color: white;
-      padding: 68px 0 58px;
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
+      padding: 76px 0 64px;
+      background: var(--lavender);
+      color: var(--text);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      border: 1px solid var(--soft-lavender);
+      border-radius: 50%;
     }
 
     .hero::before {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      border: 1px solid #ffffff17;
+      width: 270px;
+      height: 270px;
       right: -90px;
-      top: -130px;
-      box-shadow: 0 0 0 35px #ffffff08, 0 0 0 75px #ffffff05;
+      top: -125px;
+    }
+
+    .hero::after {
+      width: 170px;
+      height: 170px;
+      right: -40px;
+      top: -75px;
     }
 
     .hero-content {
       position: relative;
-      max-width: 780px;
+      z-index: 1;
+      max-width: 800px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      border: 1px solid #ffffff30;
+      gap: 9px;
+      border: 1px solid var(--soft-lavender);
       border-radius: 999px;
       padding: 7px 12px;
-      color: var(--lime);
-      font-size: 12px;
-      font-weight: 750;
+      color: var(--text);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1.1px;
     }
 
     .eyebrow i {
       width: 7px;
       height: 7px;
-      background: var(--lime);
+      flex: 0 0 7px;
       border-radius: 50%;
+      background: var(--text);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      overflow-wrap: anywhere;
     }
 
     h1 {
-      margin: 23px 0 16px;
       max-width: 740px;
-      font-size: clamp(38px, 7vw, 66px);
-      line-height: 1.06;
-      letter-spacing: -2.5px;
+      margin: 24px 0 16px;
+      font-size: clamp(38px, 6.5vw, 66px);
+      font-weight: 500;
+      line-height: 1.11;
+      letter-spacing: -2.3px;
     }
 
-    h1 span { color: var(--lime); }
+    h1 span {
+      display: inline;
+      padding: 0 5px 3px;
+      border-radius: 7px;
+      background: var(--soft-lavender);
+      color: var(--text);
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
 
     .hero-copy {
-      max-width: 590px;
-      color: #d1ded6;
+      max-width: 600px;
+      margin: 0;
+      color: var(--muted);
       font-size: 16px;
+      line-height: 1.8;
     }
 
     .searchbox {
       display: flex;
-      gap: 10px;
+      gap: 9px;
+      max-width: 690px;
+      margin-top: 29px;
       padding: 8px;
-      margin-top: 30px;
-      background: white;
+      border: 1px solid var(--soft-lavender);
       border-radius: 17px;
-      max-width: 680px;
-      box-shadow: 0 14px 40px #00000020;
+      background: var(--white);
+      box-shadow: var(--shadow);
     }
 
     .searchbox input {
       flex: 1;
+      width: 100%;
       min-width: 0;
-      padding: 12px;
-      color: var(--forest);
-      background: transparent;
+      padding: 10px 12px;
       border: 0;
+      border-radius: 10px;
       outline: 0;
+      background: transparent;
+      color: var(--text);
       font-size: 14px;
     }
 
-    .searchbox input:focus-visible {
-      outline: 2px solid var(--green);
-      border-radius: 8px;
+    .searchbox input::placeholder {
+      color: var(--muted);
+      opacity: 1;
     }
 
-    .searchbox button { flex-shrink: 0; }
+    .searchbox input:focus-visible {
+      outline: 1px solid var(--soft-lavender);
+      outline-offset: 0;
+    }
+
+    .searchbox .primary {
+      flex: 0 0 auto;
+    }
 
     .trustline {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 20px;
-      color: #d1ded6;
-      font-size: 12px;
+      gap: 9px 18px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 11px;
     }
 
     .trustline span::before {
       content: "✓";
-      color: var(--lime);
-      font-weight: 900;
       margin-right: 6px;
+      color: var(--text);
+      font-weight: 600;
     }
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      background: white;
-      border: 1px solid var(--line);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 0;
+      padding: 23px 18px;
+      border: 1px solid var(--soft-lavender);
       border-radius: var(--radius);
-      margin-top: -1px;
-      padding: 22px;
-      gap: 16px;
+      background: var(--white);
+      box-shadow: var(--shadow);
     }
 
-    .stat { text-align: center; }
-    .stat strong { display: block; font-size: 15px; }
-    .stat span { font-size: 12px; color: var(--muted); }
+    .stat {
+      min-width: 0;
+      text-align: center;
+    }
 
-    section.content-section { padding: 55px 0; }
+    .stat strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    section.content-section {
+      padding: 62px 0;
+    }
 
     .section-head {
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 25px;
+      gap: 18px;
+      margin-bottom: 26px;
     }
 
     .kicker {
-      color: var(--green);
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: 1.8px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     h2 {
       margin: 7px 0;
-      font-size: clamp(25px, 4vw, 36px);
-      line-height: 1.2;
-      letter-spacing: -1px;
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -1.1px;
     }
 
     .subtext {
+      max-width: 590px;
       margin: 8px 0 0;
-      max-width: 580px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
+      line-height: 1.8;
     }
 
     .category-grid {
@@ -448,62 +413,91 @@ button {
     }
 
     .category {
-      border: 1px solid var(--line);
-      background: white;
+      min-width: 0;
+      display: block;
+      padding: 22px 18px;
+      border: 1px solid var(--soft-lavender);
       border-radius: var(--radius);
-      padding: 21px 17px;
+      background: var(--white);
+      color: var(--text);
       text-align: left;
       cursor: pointer;
-      min-width: 0;
-      transition: transform .18s, border-color .18s;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
 
     .category:hover {
       transform: translateY(-3px);
-      border-color: #9cbea8;
+      box-shadow: var(--shadow);
     }
 
     .category-icon {
       width: 47px;
       height: 47px;
-      border-radius: 15px;
       display: grid;
       place-items: center;
-      font-size: 23px;
-      background: #edf5e8;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
+      border-radius: 15px;
+      background: var(--soft-lavender);
+      font-size: 22px;
     }
 
-    .category strong { display: block; font-size: 15px; }
-    .category p { color: var(--muted); font-size: 12px; margin: 7px 0 14px; }
-    .category .arrow { color: var(--green); font-weight: 850; }
+    .category strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
 
-    .opportunities { background: #eef2e9; }
+    .category p {
+      min-height: 62px;
+      margin: 7px 0 13px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .category .arrow {
+      color: var(--text);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .opportunities {
+      background: var(--soft-lavender);
+    }
 
     .filter-row {
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      padding: 3px 0 12px;
-      margin-bottom: 14px;
+      padding: 3px 2px 13px;
+      margin: 0 0 12px;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
     }
 
     .filter {
-      flex-shrink: 0;
-      border: 1px solid #dbe3d9;
-      background: white;
-      color: var(--forest);
-      border-radius: 999px;
+      flex: 0 0 auto;
+      min-height: 39px;
       padding: 9px 15px;
-      font-size: 12px;
-      font-weight: 750;
+      border: 1px solid var(--soft-lavender);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--text);
+      font-size: 11px;
+      font-weight: 500;
       cursor: pointer;
+      transition: box-shadow 0.18s ease;
+    }
+
+    .filter:hover {
+      box-shadow: var(--shadow);
     }
 
     .filter.active {
-      background: var(--forest);
-      color: white;
-      border-color: var(--forest);
+      background: var(--lavender);
+      border-color: var(--lavender);
+      color: var(--text);
     }
 
     .results-grid {
@@ -513,153 +507,392 @@ button {
     }
 
     .resource-card {
-      padding: 22px;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
       min-width: 0;
+      padding: 23px;
+      border: 1px solid var(--soft-lavender);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 4px 16px rgba(81, 77, 89, 0.035);
     }
 
     .resource-top {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 10px;
     }
 
     .resource-type {
-      color: var(--green);
-      font-size: 11px;
-      font-weight: 850;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
-      letter-spacing: .8px;
     }
 
     .resource-mark {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
       display: grid;
       place-items: center;
       border-radius: 12px;
-      background: #edf5e8;
+      background: var(--soft-lavender);
+      font-size: 18px;
     }
 
-    .resource-card h3 { margin: 15px 0 7px; font-size: 18px; }
-    .resource-card p { color: var(--muted); font-size: 13px; min-height: 42px; }
+    .resource-card h3 {
+      margin: 15px 0 7px;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: -0.3px;
+    }
+
+    .resource-card p {
+      min-height: 43px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
 
     .resource-link {
-      display: inline-block;
-      color: var(--green);
-      font-size: 13px;
-      font-weight: 800;
-      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 15px;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--soft-lavender);
+      text-underline-offset: 4px;
     }
 
-    .resource-link:hover { text-decoration: underline; }
+    .resource-link:hover {
+      text-decoration-color: var(--text);
+    }
 
     .empty {
       grid-column: 1 / -1;
-      padding: 25px;
-      text-align: center;
-      color: var(--muted);
-      background: white;
+      padding: 28px 20px;
+      border: 1px solid var(--soft-lavender);
       border-radius: var(--radius);
+      background: var(--white);
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
     }
 
     .ai-banner {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: minmax(0, 1fr) auto;
       align-items: center;
       gap: 25px;
-      background: var(--forest);
-      color: white;
       padding: 34px;
+      border: 1px solid var(--soft-lavender);
       border-radius: 26px;
+      background: var(--soft-lavender);
+      color: var(--text);
     }
 
-    .ai-banner h2 { font-size: 29px; }
-    .ai-banner p { color: #d1ded6; max-width: 550px; font-size: 14px; }
+    .ai-banner h2 {
+      margin: 13px 0 8px;
+      font-size: clamp(24px, 3.5vw, 30px);
+      font-weight: 500;
+    }
+
+    .ai-banner p {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
 
     .ai-badge {
       display: inline-block;
-      background: #ffffff15;
-      border: 1px solid #ffffff30;
       padding: 7px 10px;
+      border: 1px solid var(--soft-lavender);
       border-radius: 999px;
-      color: var(--lime);
-      font-size: 11px;
-      font-weight: 800;
+      background: var(--white);
+      color: var(--text);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+    }
+
+    .ai-banner .primary {
+      background: var(--white);
+      border-color: var(--white);
+      white-space: nowrap;
     }
 
     .notice {
-      margin-top: 20px;
+      margin: 20px 0 0;
       color: var(--muted);
-      font-size: 11px;
-      line-height: 1.7;
+      font-size: 10px;
+      line-height: 1.8;
     }
 
     footer {
-      background: white;
-      border-top: 1px solid var(--line);
-      padding: 28px 0;
+      padding: 27px 0;
+      border-top: 1px solid var(--soft-lavender);
+      background: var(--white);
     }
 
     .footer-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
       flex-wrap: wrap;
+      gap: 18px;
     }
 
-    .footer-row p { color: var(--muted); font-size: 12px; margin: 0; }
+    .footer-row .brand {
+      font-size: 18px;
+    }
+
+    .footer-row .logo {
+      width: 38px;
+      height: 38px;
+      flex-basis: 38px;
+      border-radius: 12px;
+      font-size: 19px;
+    }
+
+    .footer-row p {
+      max-width: 470px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .navlinks {
+        gap: 15px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
 
     @media (max-width: 760px) {
-      .container { width: calc(100% - 28px); }
-      .nav { min-height: 68px; }
-      .menu-toggle { display: block; }
+      .container {
+        width: calc(100% - 30px);
+      }
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .brand {
+        gap: 9px;
+        font-size: 19px;
+      }
+
+      .logo {
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
+      }
+
+      .brand small {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
       .navlinks {
         display: none;
         position: absolute;
-        z-index: 5;
-        top: 118px;
-        left: 14px;
-        right: 14px;
-        padding: 18px;
-        background: white;
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        box-shadow: 0 15px 35px #00000012;
-        flex-direction: column;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        z-index: 20;
         align-items: stretch;
-        gap: 16px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+        border: 1px solid var(--soft-lavender);
+        border-radius: 17px;
+        background: var(--white);
+        box-shadow: var(--shadow);
       }
-      .navlinks.open { display: flex; }
-      .hero { padding: 47px 0 40px; }
-      h1 { letter-spacing: -1.5px; }
-      .hero-copy { font-size: 14px; }
-      .searchbox { gap: 4px; padding: 6px; }
-      .searchbox input { padding: 10px 7px; font-size: 12px; }
-      .searchbox .primary { padding: 10px 12px; font-size: 12px; }
-      .trustline { gap: 9px 13px; }
-      .stats { padding: 17px 8px; gap: 5px; }
-      .stat strong { font-size: 12px; }
-      .stat span { font-size: 10px; }
-      section.content-section { padding: 40px 0; }
-      .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-      .category { padding: 16px 13px; border-radius: 17px; }
-      .category-icon { margin-bottom: 12px; }
-      .category p { min-height: 40px; }
-      .section-head { align-items: start; flex-direction: column; }
-      .results-grid { grid-template-columns: 1fr; }
-      .resource-card p { min-height: 0; }
-      .ai-banner { grid-template-columns: 1fr; padding: 24px; }
-      .ai-banner .primary { justify-self: start; }
+
+      .navlinks.open {
+        display: flex;
+      }
+
+      .navlinks > a:not(.nav-cta) {
+        padding: 4px 0;
+      }
+
+      .nav-cta {
+        align-self: flex-start;
+      }
+
+      .hero {
+        padding: 51px 0 43px;
+      }
+
+      .hero::before {
+        right: -170px;
+      }
+
+      .hero::after {
+        right: -120px;
+      }
+
+      h1 {
+        margin-top: 20px;
+        font-size: clamp(37px, 10vw, 52px);
+        letter-spacing: -1.7px;
+      }
+
+      .hero-copy {
+        font-size: 14px;
+      }
+
+      .searchbox {
+        gap: 5px;
+        padding: 6px;
+        margin-top: 23px;
+      }
+
+      .searchbox input {
+        padding: 10px 7px;
+        font-size: 12px;
+      }
+
+      .searchbox .primary {
+        min-height: 40px;
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      .trustline {
+        gap: 8px 12px;
+        font-size: 10px;
+      }
+
+      .stats {
+        gap: 5px;
+        padding: 17px 8px;
+        border-radius: 16px;
+      }
+
+      .stat strong {
+        font-size: 12px;
+      }
+
+      .stat span {
+        font-size: 9px;
+      }
+
+      section.content-section {
+        padding: 43px 0;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .category-grid {
+        gap: 10px;
+      }
+
+      .category {
+        padding: 16px 13px;
+        border-radius: 17px;
+      }
+
+      .category-icon {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 12px;
+        border-radius: 13px;
+      }
+
+      .category p {
+        min-height: 62px;
+        font-size: 11px;
+      }
+
+      .category .arrow {
+        font-size: 10px;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resource-card {
+        padding: 20px;
+      }
+
+      .resource-card p {
+        min-height: 0;
+      }
+
+      .ai-banner {
+        grid-template-columns: 1fr;
+        gap: 19px;
+        padding: 24px 20px;
+        border-radius: 21px;
+      }
+
+      .ai-banner .primary {
+        justify-self: start;
+      }
+
+      .footer-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        width: calc(100% - 24px);
+      }
+
+      .searchbox input {
+        font-size: 11px;
+      }
+
+      .searchbox .primary {
+        padding-inline: 9px;
+      }
+
+      .category {
+        padding-inline: 11px;
+      }
+
+      .category strong {
+        font-size: 13px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition: none !important; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -672,18 +905,18 @@ button {
   <header>
     <div class="container nav">
       <a class="brand" href="#home" aria-label="ZIRA AI home">
-        <span class="logo">Z</span>
+        <span class="logo" aria-hidden="true">Z</span>
         <span>ZIRA AI<small>YOUR FUTURE, WITHIN REACH</small></span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle"
-        aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <button class="menu-toggle" id="menuToggle" type="button"
+        aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false">☰</button>
 
-      <nav class="navlinks" id="navLinks">
+      <nav class="navlinks" id="navLinks" aria-label="Main navigation">
         <a href="#explore">Explore</a>
         <a href="#opportunities">Opportunities</a>
         <a href="#assistant">AI Assistant</a>
-        <a class="nav-cta" href="#opportunities">Get started ↗</a>
+        <a class="nav-cta" href="#opportunities">Get started <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -691,20 +924,15 @@ button {
   <main>
     <section class="hero" id="home">
       <div class="container hero-content">
-        <div class="eyebrow"><i></i> YOUR NEXT CHAPTER STARTS HERE</div>
-
+        <div class="eyebrow"><i aria-hidden="true"></i> YOUR NEXT CHAPTER STARTS HERE</div>
         <h1>Big dreams.<br>More ways to <span>get there.</span></h1>
-
         <p class="hero-copy">
-          Discover scholarships, career opportunities and free learning
-          resources—all in one simple place. Your next step starts here.
+          Discover scholarships, career opportunities and free learning resources—all in one simple place. Your next step starts here.
         </p>
 
-        <form class="searchbox" id="searchForm">
-          <input id="searchInput" type="search"
-            placeholder="Search jobs, scholarships, courses..."
-            aria-label="Search opportunities">
-          <button class="primary" type="submit">Search ↗</button>
+        <form class="searchbox" id="searchForm" role="search">
+          <input id="searchInput" type="search" placeholder="Search jobs, scholarships, courses..." aria-label="Search opportunities" autocomplete="off">
+          <button class="primary" type="submit">Search <span aria-hidden="true">↗</span></button>
         </form>
 
         <div class="trustline">
@@ -715,20 +943,11 @@ button {
       </div>
     </section>
 
-    <div class="container">
+    <div class="container" aria-label="How ZIRA AI helps">
       <div class="stats">
-        <div class="stat">
-          <strong>Learn</strong>
-          <span>Build useful skills</span>
-        </div>
-        <div class="stat">
-          <strong>Discover</strong>
-          <span>Explore new pathways</span>
-        </div>
-        <div class="stat">
-          <strong>Take action</strong>
-          <span>Visit official sources</span>
-        </div>
+        <div class="stat"><strong>Learn</strong><span>Build useful skills</span></div>
+        <div class="stat"><strong>Discover</strong><span>Explore new pathways</span></div>
+        <div class="stat"><strong>Take action</strong><span>Visit official sources</span></div>
       </div>
     </div>
 
@@ -738,36 +957,34 @@ button {
           <div>
             <div class="kicker">Explore your possibilities</div>
             <h2>What are you looking for?</h2>
-            <p class="subtext">
-              Start with a category and discover useful places to explore.
-            </p>
+            <p class="subtext">Start with a category and discover useful places to explore.</p>
           </div>
         </div>
 
         <div class="category-grid">
-          <button class="category" data-category="Scholarships">
-            <span class="category-icon">🎓</span>
+          <button class="category" type="button" data-category="Scholarships" aria-label="Explore scholarship resources">
+            <span class="category-icon" aria-hidden="true">🎓</span>
             <strong>Scholarships</strong>
             <p>Explore education funding and student schemes.</p>
             <span class="arrow">Explore resources ↗</span>
           </button>
 
-          <button class="category" data-category="Jobs">
-            <span class="category-icon">💼</span>
-            <strong>Jobs & Careers</strong>
+          <button class="category" type="button" data-category="Jobs" aria-label="Explore jobs and careers">
+            <span class="category-icon" aria-hidden="true">💼</span>
+            <strong>Jobs &amp; Careers</strong>
             <p>Find official career and employment resources.</p>
             <span class="arrow">Explore resources ↗</span>
           </button>
 
-          <button class="category" data-category="Internships">
-            <span class="category-icon">🚀</span>
+          <button class="category" type="button" data-category="Internships" aria-label="Explore internship resources">
+            <span class="category-icon" aria-hidden="true">🚀</span>
             <strong>Internships</strong>
             <p>Learn where to look for practical experience.</p>
             <span class="arrow">Explore resources ↗</span>
           </button>
 
-          <button class="category" data-category="Courses">
-            <span class="category-icon">📚</span>
+          <button class="category" type="button" data-category="Courses" aria-label="Explore free courses">
+            <span class="category-icon" aria-hidden="true">📚</span>
             <strong>Free Courses</strong>
             <p>Discover online learning and skill-building sites.</p>
             <span class="arrow">Explore resources ↗</span>
@@ -782,29 +999,22 @@ button {
           <div>
             <div class="kicker">Your discovery space</div>
             <h2>Explore useful resources</h2>
-            <p class="subtext">
-              Search and filter starting points from official websites.
-              Always check the source for current information.
-            </p>
+            <p class="subtext">Search and filter starting points from official websites. Always check the source for current information.</p>
           </div>
         </div>
 
         <div class="filter-row" id="filterRow" aria-label="Filter resources">
-          <button class="filter active" data-filter="All">All resources</button>
-          <button class="filter" data-filter="Scholarships">Scholarships</button>
-          <button class="filter" data-filter="Jobs">Jobs</button>
-          <button class="filter" data-filter="Internships">Internships</button>
-          <button class="filter" data-filter="Courses">Free courses</button>
+          <button class="filter active" type="button" data-filter="All" aria-pressed="true">All resources</button>
+          <button class="filter" type="button" data-filter="Scholarships" aria-pressed="false">Scholarships</button>
+          <button class="filter" type="button" data-filter="Jobs" aria-pressed="false">Jobs</button>
+          <button class="filter" type="button" data-filter="Internships" aria-pressed="false">Internships</button>
+          <button class="filter" type="button" data-filter="Courses" aria-pressed="false">Free courses</button>
         </div>
 
-        <div class="results-grid" id="results" aria-live="polite"></div>
+        <div class="results-grid" id="results" aria-live="polite" aria-busy="false"></div>
 
         <p class="notice">
-          Important: These are official resource starting points, not a
-          live or verified list of current vacancies. Eligibility, deadlines
-          and availability can change. Confirm all details on the official
-          website before applying. ZIRA AI does not claim government
-          affiliation or endorsement.
+          Important: These are official resource starting points, not a live or verified list of current vacancies. Eligibility, deadlines and availability can change. Confirm all details on the official website before applying. ZIRA AI does not claim government affiliation or endorsement.
         </p>
       </div>
     </section>
@@ -815,13 +1025,9 @@ button {
           <div>
             <span class="ai-badge">THE NEXT STEP</span>
             <h2>Meet your future AI assistant.</h2>
-            <p>
-              We're building a simpler way to navigate learning and
-              opportunities. The AI assistant is not active in this
-              prototype yet.
-            </p>
+            <p>We're building a simpler way to navigate learning and opportunities. The AI assistant is not active in this prototype yet.</p>
           </div>
-          <a class="primary" href="#opportunities">Explore resources ↗</a>
+          <a class="primary" href="#opportunities">Explore resources <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -829,8 +1035,8 @@ button {
 
   <footer>
     <div class="container footer-row">
-      <a class="brand" href="#home">
-        <span class="logo">Z</span>
+      <a class="brand" href="#home" aria-label="ZIRA AI home">
+        <span class="logo" aria-hidden="true">Z</span>
         <span>ZIRA AI<small>OPPORTUNITIES FOR EVERYONE</small></span>
       </a>
       <p>Designed to help you take your next step. © <span id="year"></span> ZIRA AI</p>
@@ -838,177 +1044,184 @@ button {
   </footer>
 
   <script>
+    'use strict';
+
     const resources = [
       {
-        type: "Scholarships",
-        icon: "🎓",
-        name: "National Scholarship Portal",
-        description: "Explore government scholarship schemes and official application information.",
-        url: "https://scholarships.gov.in/"
+        type: 'Scholarships',
+        icon: '🎓',
+        name: 'National Scholarship Portal',
+        description: 'Explore government scholarship schemes and official application information.',
+        url: 'https://scholarships.gov.in/'
       },
       {
-        type: "Scholarships",
-        icon: "🌱",
-        name: "West Bengal Government",
-        description: "Start with the state government's official website to explore schemes.",
-        url: "https://wb.gov.in/"
+        type: 'Scholarships',
+        icon: '📍',
+        name: 'West Bengal Government',
+        description: 'Start with the state government’s official website to explore schemes and public information.',
+        url: 'https://wb.gov.in/'
       },
       {
-        type: "Jobs",
-        icon: "💼",
-        name: "National Career Service",
-        description: "Explore employment services, career guidance and job-related resources.",
-        url: "https://www.ncs.gov.in/"
+        type: 'Jobs',
+        icon: '💼',
+        name: 'National Career Service',
+        description: 'Explore employment services, career guidance and job-related resources.',
+        url: 'https://www.ncs.gov.in/'
       },
       {
-        type: "Courses",
-        icon: "📚",
-        name: "SWAYAM",
-        description: "Explore online courses from Indian educational institutions.",
-        url: "https://swayam.gov.in/"
+        type: 'Courses',
+        icon: '📚',
+        name: 'SWAYAM',
+        description: 'Explore online courses from Indian educational institutions.',
+        url: 'https://swayam.gov.in/'
       },
       {
-        type: "Courses",
-        icon: "🧠",
-        name: "DIKSHA",
-        description: "Explore digital learning resources and educational content.",
-        url: "https://diksha.gov.in/"
+        type: 'Courses',
+        icon: '🧠',
+        name: 'DIKSHA',
+        description: 'Explore digital learning resources and educational content.',
+        url: 'https://diksha.gov.in/'
       },
       {
-        type: "Internships",
-        icon: "🚀",
-        name: "AICTE Internship Portal",
-        description: "Explore the official portal for internship opportunities and information.",
-        url: "https://internship.aicte-india.org/"
+        type: 'Internships',
+        icon: '🚀',
+        name: 'AICTE Internship Portal',
+        description: 'Explore the internship portal and check each opportunity’s current details.',
+        url: 'https://internship.aicte-india.org/'
       }
     ];
 
-    const results = document.getElementById("results");
-    const searchInput = document.getElementById("searchInput");
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
+    const results = document.getElementById('results');
+    const searchInput = document.getElementById('searchInput');
+    const searchForm = document.getElementById('searchForm');
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.getElementById('menuToggle');
+    const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
 
-    let activeFilter = "All";
+    let activeFilter = 'All';
 
     function renderResources() {
-      const query = searchInput.value.trim().toLowerCase();
+      const query = searchInput.value.trim().toLocaleLowerCase();
 
-      const filtered = resources.filter(item => {
-        const matchesCategory =
-          activeFilter === "All" || item.type === activeFilter;
-
-        const searchable = (
-          item.name + " " + item.description + " " + item.type
-        ).toLowerCase();
-
-        return matchesCategory && searchable.includes(query);
+      const filtered = resources.filter((item) => {
+        const categoryMatches = activeFilter === 'All' || item.type === activeFilter;
+        const searchable = `${item.name} ${item.description} ${item.type}`.toLocaleLowerCase();
+        return categoryMatches && searchable.includes(query);
       });
 
       results.replaceChildren();
 
-      if (!filtered.length) {
-        const empty = document.createElement("div");
-        empty.className = "empty";
-        empty.textContent =
-          "No matching resources found. Try another keyword or category.";
+      if (filtered.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'empty';
+        empty.textContent = 'No matching resources found. Try another keyword or category.';
         results.appendChild(empty);
         return;
       }
 
-      filtered.forEach(item => {
-        const card = document.createElement("article");
-        card.className = "resource-card";
+      const fragment = document.createDocumentFragment();
 
-        const top = document.createElement("div");
-        top.className = "resource-top";
+      filtered.forEach((item) => {
+        const card = document.createElement('article');
+        card.className = 'resource-card';
 
-        const type = document.createElement("span");
-        type.className = "resource-type";
+        const top = document.createElement('div');
+        top.className = 'resource-top';
+
+        const type = document.createElement('span');
+        type.className = 'resource-type';
         type.textContent = item.type;
 
-        const icon = document.createElement("span");
-        icon.className = "resource-mark";
-        icon.setAttribute("aria-hidden", "true");
+        const icon = document.createElement('span');
+        icon.className = 'resource-mark';
+        icon.setAttribute('aria-hidden', 'true');
         icon.textContent = item.icon;
 
-        const title = document.createElement("h3");
+        const title = document.createElement('h3');
         title.textContent = item.name;
 
-        const description = document.createElement("p");
+        const description = document.createElement('p');
         description.textContent = item.description;
 
-        const link = document.createElement("a");
-        link.className = "resource-link";
+        const link = document.createElement('a');
+        link.className = 'resource-link';
         link.href = item.url;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        link.textContent = "Visit official website ↗";
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Visit official website ↗';
+        link.setAttribute(
+          'aria-label',
+          `Visit ${item.name} official website (opens in a new tab)`
+        );
 
         top.append(type, icon);
         card.append(top, title, description, link);
-        results.appendChild(card);
+        fragment.appendChild(card);
       });
+
+      results.appendChild(fragment);
     }
 
-    function selectFilter(filter) {
+    function setFilter(filter, shouldScroll = false) {
       activeFilter = filter;
 
-      document.querySelectorAll("[data-filter]").forEach(button => {
-        const active = button.dataset.filter === filter;
-        button.classList.toggle("active", active);
-        button.setAttribute("aria-pressed", String(active));
+      filterButtons.forEach((button) => {
+        const isActive = button.dataset.filter === filter;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
       });
 
       renderResources();
-      document.getElementById("opportunities")
-        .scrollIntoView({ behavior: "smooth", block: "start" });
+
+      if (shouldScroll) {
+        document.getElementById('opportunities').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     }
 
-    document.querySelectorAll("[data-filter]").forEach(button => {
-      button.addEventListener("click", () => {
-        selectFilter(button.dataset.filter);
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        setFilter(button.dataset.filter);
       });
     });
 
-    document.querySelectorAll("[data-category]").forEach(button => {
-      button.addEventListener("click", () => {
-        searchInput.value = "";
-        selectFilter(button.dataset.category);
+    document.querySelectorAll('[data-category]').forEach((button) => {
+      button.addEventListener('click', () => {
+        searchInput.value = '';
+        setFilter(button.dataset.category, true);
       });
     });
 
-    document.getElementById("searchForm").addEventListener("submit", event => {
+    searchForm.addEventListener('submit', (event) => {
       event.preventDefault();
-      activeFilter = "All";
-
-      document.querySelectorAll("[data-filter]").forEach(button => {
-        const active = button.dataset.filter === "All";
-        button.classList.toggle("active", active);
-        button.setAttribute("aria-pressed", String(active));
-      });
-
-      renderResources();
-      document.getElementById("opportunities")
-        .scrollIntoView({ behavior: "smooth", block: "start" });
+      setFilter('All', true);
     });
 
-    searchInput.addEventListener("input", renderResources);
+    searchInput.addEventListener('input', renderResources);
 
-    menuToggle.addEventListener("click", () => {
-      const open = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(open));
-      menuToggle.textContent = open ? "✕" : "☰";
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute(
+        'aria-label',
+        isOpen ? 'Close navigation' : 'Open navigation'
+      );
+      menuToggle.textContent = isOpen ? '✕' : '☰';
     });
 
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "☰";
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation');
+        menuToggle.textContent = '☰';
       });
     });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = String(new Date().getFullYear());
 
     renderResources();
   </script>
