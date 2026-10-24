@@ -9,19 +9,178 @@
   <title>ZIRA AI — Your Future, Within Reach</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
    
+
+/* ZIRA AI — Light Lavender Professional Design */
+
 :root {
-  --forest: #34264f;
-  --green: #7255a5;
-  --lime: #e9dfff;
-  --paper: #f7f4fc;
-  --white: #ffffff;
-  --muted: #716b7d;
-  --line: #e9e3f1;
+  --forest: #514D59;
+  --green: #897AA1;
+  --lime: #EAE2F8;
+  --paper: #F8F6FF;
+  --white: #FFFFFF;
+  --muted: #777181;
+  --line: #EAE2F8;
   --radius: 20px;
 }
-    * { box-sizing: border-box; }
 
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+  background: #F8F6FF;
+  color: #514D59;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 500;
+  color: #514D59;
+  letter-spacing: -0.4px;
+}
+
+.brand {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.navlinks,
+.nav-cta,
+.primary,
+.filter,
+.category strong,
+.stat strong {
+  font-weight: 500;
+}
+
+.topbar {
+  background: #F0EAFB;
+  color: #625B6B;
+}
+
+.topbar span {
+  color: #75658C;
+  font-weight: 500;
+}
+
+header,
+footer {
+  background: #FFFFFF;
+}
+
+.logo {
+  background: #EAE2F8;
+  color: #625675;
+}
+
+.nav-cta,
+.primary {
+  background: #EAE2F8;
+  color: #514D59;
+  border: 1px solid #EAE2F8;
+}
+
+.hero {
+  background: #F0EAFB;
+  color: #514D59;
+}
+
+.hero-copy,
+.trustline {
+  color: #716B7D;
+}
+
+h1 span {
+  color: #897AA1;
+}
+
+.eyebrow {
+  border-color: #DCD2EC;
+  color: #75658C;
+}
+
+.eyebrow i {
+  background: #B8A9D2;
+}
+
+.trustline span::before {
+  color: #897AA1;
+}
+
+.searchbox {
+  border: 1px solid #EAE2F8;
+  box-shadow: 0 10px 30px rgba(81, 77, 89, 0.07);
+}
+
+.category-icon,
+.resource-mark {
+  background: #F0EAFB;
+}
+
+.category:hover {
+  border-color: #D2C5E6;
+}
+
+.opportunities {
+  background: #F3EFFA;
+}
+
+.filter {
+  border-color: #EAE2F8;
+  color: #625B6B;
+}
+
+.filter.active {
+  background: #EAE2F8;
+  color: #514D59;
+  border-color: #DCD2EC;
+}
+
+.resource-type,
+.resource-link,
+.kicker,
+.category .arrow {
+  color: #75658C;
+}
+
+.resource-card,
+.category {
+  background: #FFFFFF;
+  border-color: #EAE2F8;
+  box-shadow: 0 5px 20px rgba(81, 77, 89, 0.04);
+}
+
+.ai-banner {
+  background: #F0EAFB;
+  color: #514D59;
+  border: 1px solid #EAE2F8;
+}
+
+.ai-banner p {
+  color: #716B7D;
+}
+
+.ai-badge {
+  color: #75658C;
+  background: #FFFFFF;
+  border-color: #EAE2F8;
+}
+
+input,
+button {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 760px) {
+  .navlinks {
+    background: #FFFFFF;
+  }
+}
+    
+    * { box-sizing: border-box; }
+    
     html { scroll-behavior: smooth; }
 
     body {
